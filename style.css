@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+
+div {
+    justify-content: center;
+    display: flex;
+    width: 600px;
+    margin: 100px auto;
+    border: 1px solid;
+}
+
+h2 {
+    margin-top: 100px;
+    color: beige;
+}
+
+button {
+    background-color: black;
+    color: beige;
+    border: 2px solid beige;
+    margin: 10px;
+    width: 150px;
+    height: 70px;
+}
+
+button:hover {
+    color: black;
+    background-color: beige;
+}
