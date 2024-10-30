@@ -3,19 +3,50 @@ body {
     text-align: center;
 }
 
-
-div {
-    justify-content: center;
-    display: flex;
-    width: 600px;
-    margin: 100px auto;
-    border: 1px solid;
-}
-
 h2 {
     margin-top: 100px;
     color: beige;
+    font-size: 40px;
 }
+
+div {
+    border: 1px solid beige;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 600px;
+    height: 200px;
+    margin: 50px auto 50px auto;
+}
+
+#fight-el {
+    /* display: none; */
+    margin: 50px auto 0px auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: beige;
+    margin: 30px;
+    /* display: none; */
+}
+
+#computer-choice {
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
+
+}
+
+pre {
+    color: beige;
+    display: none;
+}
+
 
 button {
     background-color: black;
