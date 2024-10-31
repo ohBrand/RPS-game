@@ -5,7 +5,7 @@ const asciiPlayer = document.querySelector('#player-choice')
 const asciiComp = document.querySelector('#computer-choice')
 const choices = ['rock', 'paper', 'scissors']
 const playerScoreEl = document.querySelector('#playerscore-el')
-const ComputerScoreEl = document.querySelector('#compscore-el')
+const computerScoreEl = document.querySelector('#compscore-el')
 const asciiArray = [`    _______
 ---'   ____)
       (_____)
@@ -40,48 +40,48 @@ gameEl.addEventListener('click', (event,) => {
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[1]
         compScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if  (event.target === btn[0] && computerChoice === choices[2]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[2]
         playerScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[1]
         asciiComp.textContent = asciiArray[0]
         playerScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[2]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[1]
         asciiComp.textContent = asciiArray[2]
         compScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[2] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[2]
         asciiComp.textContent = asciiArray[0]
         compScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[2] && computerChoice === choices[1]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[2]
         asciiComp.textContent = asciiArray[1]
         playerScore++
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[0] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[0]
-        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        computerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
         playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[1]) {
         fightEl.style.display = 'flex'
