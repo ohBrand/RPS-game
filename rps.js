@@ -4,6 +4,8 @@ const fightEl = document.querySelector('#fight-el')
 const asciiPlayer = document.querySelector('#player-choice')
 const asciiComp = document.querySelector('#computer-choice')
 const choices = ['rock', 'paper', 'scissors']
+const playerScoreEl = document.querySelector('#playerscore-el')
+const ComputerScoreEl = document.querySelector('#compscore-el')
 const asciiArray = [`    _______
 ---'   ____)
       (_____)
@@ -22,100 +24,82 @@ const asciiArray = [`    _______
       (____)
 ---.__(___)`]
 
+let playerScore = 0
+let compScore = 0
 
 function getCompChoice() {
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
 
-// function rpsGame(playerChoice, computerChoice) {
-//     if (playerChoice === btn[0] && computerChoice === choices[1]) {
-//         console.log('computer wins!');
-//     } else if  (playerChoice === btn[0] && computerChoice === choices[2]) {
-//         console.log('player wins!')
-//     } else if (playerChoice === btn[1] && computerChoice === choices[0]) {
-//         console.log('player wins') 
-//     } else if (playerChoice === btn[1] && computerChoice === choices[2]) {
-//         console.log('computer wins!')
-//     } else if (playerChoice === btn[2] && computerChoice === choices[0]) {
-//         console.log('computer wins!')
-//     } else if (playerChoice === btn[2] && computerChoice === choices[1]) {
-//         console.log('player wins!')
-//     } else if (playerChoice === btn[0] && computerChoice === choices[0]) {
-//         console.log('its a tie')
-//     } else if (playerChoice === btn[1] && computerChoice === choices[1]) {
-//         console.log('its a tie')
-//     } else if (playerChoice === btn[2] && computerChoice === choices[2]) {
-//         console.log('its a tie')
-//     }
-        
-// }
-
 gameEl.addEventListener('click', (event,) => {
     let computerChoice = getCompChoice()
 
     if (event.target === btn[0] && computerChoice === choices[1]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[1]
-        console.log('computer wins!')
+        compScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if  (event.target === btn[0] && computerChoice === choices[2]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[2]
-        console.log('player wins!')
+        playerScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[1]
         asciiComp.textContent = asciiArray[0]
-        console.log('player wins') 
+        playerScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[2]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[1]
         asciiComp.textContent = asciiArray[2]
-        console.log('computer wins!')
+        compScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[2] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[2]
         asciiComp.textContent = asciiArray[0]
-        console.log('computer wins!')
+        compScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[2] && computerChoice === choices[1]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[2]
         asciiComp.textContent = asciiArray[1]
-        console.log('player wins!')
+        playerScore++
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[0] && computerChoice === choices[0]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[0]
         asciiComp.textContent = asciiArray[0]
-        console.log('its a tie')
+        ComputerScoreEl.innerHTML = `Computer Score:<br> ${compScore}`
+        playerScoreEl.innerHTML = `Player Score:<br> ${playerScore}`
     } else if (event.target === btn[1] && computerChoice === choices[1]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[1]
         asciiComp.textContent = asciiArray[1]
-        console.log('its a tie')
     } else if (event.target === btn[2] && computerChoice === choices[2]) {
         fightEl.style.display = 'flex'
-        asciiPlayer.style.display = 'block'
-        asciiComp.style.display = 'block'
         asciiPlayer.textContent = asciiArray[2]
         asciiComp.textContent = asciiArray[2]
-        console.log('its a tie')
+    }
+ 
+    if (compScore === 5) {
+        console.log('Computer Wins!')
+        playerScore = 0
+        compScore = 0
+    } else if (playerScore === 5) {
+        console.log('Player Wins!')
+        playerScore = 0
+        compScore = 0
     }
 });
