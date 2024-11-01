@@ -1,12 +1,14 @@
 body {
     background-color: black;
     text-align: center;
+    font-family: 'Geo', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h2 {
     margin-top: 70px;
     color: beige;
     font-size: 40px;
+    font-style: 'Geo';
 }
 
 h3 {
@@ -33,6 +35,7 @@ p {
     color: beige;
     margin: 30px;
     /* display: none; */
+    font-size: 18px;
 }
 
 #computer-choice {
@@ -56,9 +59,30 @@ button {
     margin: 10px;
     width: 150px;
     height: 70px;
+    font-size: 18px;
+    font-family: 'Geo', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button:hover {
     color: black;
     background-color: beige;
 }
+
+#modal-el {
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 27.5%;
+    background-color: black;
+    width: 700px;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 40px;
+    display: none;
+}
+
+#play-again-el {
+    margin: 10px;
+    width: 200px;
+}
+

@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Happy+Monkey&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="modal-el">
+        <h2 class="result-el"></h2>
+        <button id="play-again-el">Want to play again?</button>
+    </div>
 
     <h2>Rock, Paper, Scissors</h2>
     <h3>Press any button to start the game. You will have 5 rounds to beat the computer.</h3>
@@ -22,9 +29,9 @@
     </div>
 
     <div id="game-el">
-        <button id="rock-el">ROCK</button>
-        <button id="paper-el">PAPER</button>
-        <button id="scissors-el">SCISSORS</button>
+        <button id="rock-el" class="rps-el">ROCK</button>
+        <button id="paper-el" class="rps-el">PAPER</button>
+        <button id="scissors-el" class="rps-el">SCISSORS</button>
     </div>
     <script src="rps.js"></script>
 </body>
